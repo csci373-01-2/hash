@@ -23,6 +23,7 @@ class hash {
   void AddItem(string name, string drink);
   int NumberOfItemsInIndex(int index);
   void PrintTable();
+  void PrintItemsInIndex(int index);
 };
 
 #endif  // MY_INC_HASH_H_

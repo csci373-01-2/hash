@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
   using std::endl;
 
   hash myHash;
-  myHash.PrintTable();
+
   myHash.AddItem("Paul", "Locha");
   myHash.AddItem("Kim ", "Iced Mocha");
   myHash.AddItem("Emma", "Strawberry Smoothy");
@@ -26,6 +26,6 @@ int main(int argc, char *argv[]) {
   myHash.AddItem("Marie", "Skinny Latte");
   myHash.AddItem("Susan", "Water");
   myHash.AddItem("Joe", "Green Tea");
-  myHash.PrintTable();
+  myHash.PrintItemsInIndex(0);
   return 0;
 }

@@ -68,9 +68,27 @@ int hash::Hash(string key) {
   using std::endl;
 
   for ( int i = 0; i < key.length(); i++ ) {
-    cout << "key[" << i << "] = " << static_cast<int> (key[i]) << endl;
     hash += static_cast<int> (key[i]);
   }
   index = hash % tableSize;
   return index;
+}
+void hash::PrintItemsInIndex(int index) {
+  item* Ptr = HashTable[index];
+  using std::cout;
+  using std::endl;
+
+  if (Ptr->name == "def_name") {
+    cout << "index = " << index << " is empty" << endl;
+  } else {
+    cout << "index = " << index
+         << " contains the following items" << endl;
+    while ( Ptr != NULL ) {
+      cout << "---------------------------\n";
+      cout << Ptr->name << endl;
+      cout << Ptr->drink << endl;
+      cout << "---------------------------\n";
+      Ptr = Ptr->next;
+    }
+  }
 }
